@@ -1,4 +1,4 @@
-module.exports = {
+export const CONSTANTS = {
     STATE_CONVERTER_REGEX: {
         USE_STATE: /((let|const|var)\s*\[.*\]\s*=\s*useState\(.*\);?)/g,
         STATE_VARIABLE: /(?<=\[)(\w+)/g,

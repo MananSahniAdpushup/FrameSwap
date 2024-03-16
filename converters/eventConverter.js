@@ -1,9 +1,7 @@
-const { regexMatcher } = require('../helpers/utils');
-const { 
-    REACT_EVENTS_CONVERTER: {
-        ON_EVENTS
-    } 
-} = require('../helpers/constants');
+import { regexMatcher } from '../helpers/utils.js';
+import { CONSTANTS } from '../helpers/constants.js';
+
+const { ON_EVENTS } = CONSTANTS.REACT_EVENTS_CONVERTER;
 
 function convertEvent(eventName) {
     return eventName
@@ -23,6 +21,6 @@ function modifyReactEvents(data) {
     return modifiedData;
 }
 
-module.exports = { 
+export { 
     modifyReactEvents
 }

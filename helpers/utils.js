@@ -5,6 +5,6 @@ function regexMatcher(stringToWorkWith, regex, stringOnly = false) {
     return stringToWorkWith.match(regex);
 }
 
-module.exports = {
+export {
     regexMatcher
 }

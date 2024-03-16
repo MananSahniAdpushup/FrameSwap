@@ -1,12 +1,12 @@
-const { regexMatcher } = require('../helpers/utils');
+import { regexMatcher } from '../helpers/utils.js';
+import { CONSTANTS } from '../helpers/constants.js';
+
 const { 
-    STATE_CONVERTER_REGEX: {
-        USE_STATE,
-        STATE_VARIABLE,
-        VARIABLE_DATA_TYPE,
-        INITIAL_STATE
-    }
-} = require('../helpers/constants');
+    USE_STATE,
+    STATE_VARIABLE,
+    VARIABLE_DATA_TYPE,
+    INITIAL_STATE
+} = CONSTANTS.STATE_CONVERTER_REGEX
 
 function getUseStateStatements(data) {
     return regexMatcher(data, USE_STATE);
@@ -34,6 +34,6 @@ function convertToSvelteStatements(data) {
     });
 }
 
-module.exports = {
+export {
     convertToSvelteStatements
 }
